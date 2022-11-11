@@ -7,13 +7,15 @@ const isDirectory = (param) => {
     console.log('¿Es un directorio?', stats.isDirectory())
     return stats.isDirectory();
 };
+
 //Función para revisar los documentos dentro de un archivo
 const dirFiles = (param) => {
     const dirFilesArray = fs.readdirSync(param);
     console.log('Contenido del directorio', dirFilesArray);
     return dirFilesArray
 }
-//muestra los archivos md dentro del directorio
+
+//Selecciona los archivos .md 
 const mdFiles = (param) => {
     const mdExtensionFiles = path.extname(param) === '.md';
     console.log('¿Es archivo .md?', mdExtensionFiles);
@@ -29,7 +31,7 @@ const getMdFiles = (param) => {
                 allMdFiles.push(param);
             }
         } else {
-            //leer de forma asincrónica el contenido de un directorio
+            //leer el contenido de un directorio
             const readDirectorFiles = fs.readdirSync(param);
             let absolutePath = readDirectorFiles.map((fileName) => path.join(param, fileName));
             
