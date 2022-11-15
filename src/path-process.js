@@ -12,17 +12,20 @@ const isPathExist = (param) => {
 
 const isPathAbsolute = (param) => {
     if (!path.isAbsolute(param)){
-        console.log('es relativa')
-        console.log('Ahora es absoluta', path.resolve(param))
-        return path.resolve(param)
+        const convertRoute = path.resolve(__dirname, param);
+        console.log('console de Param', param)
+        console.log('Ahora es absoluta', convertRoute)
+              
+        return convertRoute
+        
     } else {
         console.log('es absoluta')
         return param
     }
 };
 
-isPathExist(argsTerminal[2]);
-isPathAbsolute(argsTerminal[2]);
+/*isPathExist(argsTerminal[2]);
+isPathAbsolute(argsTerminal[2]);*/
 
 module.exports = {
    isPathExist,

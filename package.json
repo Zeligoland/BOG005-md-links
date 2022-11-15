@@ -1,5 +1,5 @@
 {
-  "name": "md-links",
+  "name": "mdlilnks-by-zeligoland",
   "version": "0.1.0",
   "engines": {
     "node": ">=14.x"
@@ -8,6 +8,31 @@
     "eslint": "^8.26.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
-    "jest": "^29.2.2"
-  }
+    "jest": "^29.3.1"
+  },
+  "description": "",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  },
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "eslint": "eslint src/** cli.js index.js test/**",
+    "eslint:fix": "npm run eslint -- --fix",
+    "build": "npm run eslint:fix && npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zeligoland/BOG005-md-links.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zeligoland/BOG005-md-links/issues"
+  },
+  "homepage": "https://github.com/Zeligoland/BOG005-md-links#readme"
 }
