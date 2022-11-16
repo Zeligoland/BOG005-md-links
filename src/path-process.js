@@ -24,8 +24,8 @@ const isPathAbsolute = (param) => {
     }
 };
 
-/*isPathExist(argsTerminal[2]);
-isPathAbsolute(argsTerminal[2]);*/
+isPathExist(argsTerminal[2]);
+/*isPathAbsolute(argsTerminal[2]);*/
 
 module.exports = {
    isPathExist,

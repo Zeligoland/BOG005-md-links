@@ -48,10 +48,10 @@ const getMdFiles = (param) => {
 };
 
 
-isDirectory(argsTerminal[2]);
+/*isDirectory(argsTerminal[2]);
 dirFiles(argsTerminal[2]);
 mdFiles(argsTerminal[2]);
-getMdFiles(argsTerminal[2]);
+getMdFiles(argsTerminal[2]);*/
 
 
 module.exports = {
