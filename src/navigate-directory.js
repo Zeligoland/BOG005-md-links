@@ -42,9 +42,9 @@ const getMdFiles = (param) => {
       }
     });
   }
-  /* console.log(allMdFiles); */
+    
   return allMdFiles.filter(elem=>mdFiles(elem))
-  // la función retorna un array con todos los archivos .md
+    // la función retorna un array con todos los archivos .md
 };
 
 
