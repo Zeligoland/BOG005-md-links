@@ -2,9 +2,7 @@ const { readAllFilesMds, validateLinks } = require('./read-file.js');
 const { isPathAbsolute } = require("./path-process.js");
 const { getMdFiles } = require("./navigate-directory.js");
 
-const rutaTerminal = process.argv[2]
-
-const mdLinks = (path, options={validate:true}) => {
+const mdLinks = (path, options={validate:false}) => {
     return new Promise((resolve, reject) =>{
         const absolutePaht = isPathAbsolute(path)
         const arrayMds = getMdFiles(absolutePaht)
@@ -18,4 +16,9 @@ const mdLinks = (path, options={validate:true}) => {
         }
     })
 }
-mdLinks(rutaTerminal).then(res=>console.log('Here is the result of your validation request', res))
+
+//mdLinks(rutaTerminal).then(res=>console.log('Here is the result of your validation request', res))
+
+module.exports = {
+    mdLinks 
+}

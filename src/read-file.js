@@ -52,7 +52,6 @@ const validateLinks = (arrayLinks) => {
       }))
   );
   const promesa = Promise.all(arrayPromes);
-  console.log(promesa);
   return promesa;
 };
 

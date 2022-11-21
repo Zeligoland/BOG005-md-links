@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const argsTerminal = process.argv
+
 
 const isPathExist = (param) => {
     if (!fs.existsSync(param)){
@@ -23,7 +23,7 @@ const isPathAbsolute = (param) => {
     }
 };
 
-isPathExist(argsTerminal[2]);
+//isPathExist(argsTerminal[2]);
 
 module.exports = {
    isPathExist,

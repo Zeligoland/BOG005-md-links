@@ -1,14 +1,28 @@
-const { mdLinks } = require('../src/index.js')
-const { valFalse, valTrue } = require('../__mocks__/mdLinks/mdLinks-mock.js')
-
-
+const { mdLinks } = require('../src/index.js');
+const { valFalse, valTrue } = require('./mdLinks-expected-results.js');
 
 describe('mdLinks', () => {
-    it ('Receives a directory and looks for links correctly', () => {
+    it ('Receives a directory and looks for links correctly - Receives Validate False',  () => {
         
-        const mockRoute = 'C:\\Users\\andre\\BOG005-md-links\\__mocks__\\mock-directory'
-        const validationResult = mdLinks(mockRoute, options={validate:true});
-        expect(validationResult).toBe(valTrue);
+        const mockRoute = 'C:\\Users\\andre\\BOG005-md-links\\__mocks__\\mock-directory';
+         return mdLinks(mockRoute).then((validationResult) => {
+            expect(validationResult).toStrictEqual(valFalse);
+        });
+    })
+
+    it ('Handles validate true returning an array of objects with status & ok', () => {
+        
+        const mockRoute = 'C:\\Users\\andre\\BOG005-md-links\\__mocks__\\mock-directory';
+        return mdLinks(mockRoute, options={validate:true}).then((validationResult) => {
+            expect(validationResult).toStrictEqual(valTrue);
+        })
+
+
+    })
+})
+
+
+        
 
         //expect(validationResult).toEqual(*an array)*;
         // expect(fetch).toHaveBeenCalledTimes(1);
@@ -20,7 +34,3 @@ describe('mdLinks', () => {
             // expect(fetch).toHaveBeenCalledWith('param')
     //     } )
          
-    })
-
-
-})
