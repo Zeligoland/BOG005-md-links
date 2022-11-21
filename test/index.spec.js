@@ -16,21 +16,5 @@ describe('mdLinks', () => {
         return mdLinks(mockRoute, options={validate:true}).then((validationResult) => {
             expect(validationResult).toStrictEqual(valTrue);
         })
-
-
     })
 })
-
-
-        
-
-        //expect(validationResult).toEqual(*an array)*;
-        // expect(fetch).toHaveBeenCalledTimes(1);
-        // Testing the catch partof func
-
-        // mock the promise being rejected
-        // it ('Handles validate false without status and ok', async () => {
-            // Expect function.toEqual(...)
-            // expect(fetch).toHaveBeenCalledWith('param')
-    //     } )
-         
