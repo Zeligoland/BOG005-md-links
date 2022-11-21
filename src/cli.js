@@ -3,7 +3,7 @@ const { stats, statsAndValidate } = require('./stats')
 
 const route = process.argv[2];
 const argv = process.argv
-/* console.log(argv, 9) */
+
 
 // Hacer que el archivo de CLI de JavaScript sea ejecutable
 const cli = (route, argv) => {

@@ -22,14 +22,14 @@ const readFileMd = (fileMd) => {
         };
         marked.marked(data, { renderer });
       }
-      /* console.log(arrayLinks, 27); */
+
       resolve(arrayLinks);
     });
   });
 };
 
 const readAllFilesMds = (arrayMdFiles) => {
-const arrLinks = arrayMdFiles.map((fileMd) => readFileMd(fileMd));
+  const arrLinks = arrayMdFiles.map((fileMd) => readFileMd(fileMd));
   return Promise.all(arrLinks).then((res) => res.flat());
 };
 
@@ -54,7 +54,6 @@ const validateLinks = (arrayLinks) => {
   const promesa = Promise.all(arrayPromes);
   return promesa;
 };
-
 
 module.exports = {
   readAllFilesMds,
