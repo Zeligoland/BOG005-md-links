@@ -1,4 +1,3 @@
-const path = require('path');
 const {getMdFiles } = require('../src/navigate-directory');
 
 describe ('getMdFiles function', () => {
